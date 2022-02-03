@@ -19,4 +19,10 @@ public class ClientImplCL {
         System.out.println("Test");
         clientImplService.test();
     }
+
+    @GetMapping("/boom")
+    public void boom() throws Exception {
+        System.out.println("exception");
+        throw new Exception("Something crashed");
+    }
 }
